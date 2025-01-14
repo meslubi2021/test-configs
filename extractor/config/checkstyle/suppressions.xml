@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+    "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+    "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+  <!-- Suppress MultipleStringLiterals check because the repeated strings are necessary
+       for consistent indentation and formatting in the code. -->
+  <suppress checks="MultipleStringLiterals"/>
+
+  <!-- Suppress UncommentedMain check for the specific class -->
+  <suppress checks="UncommentedMain" files="com/example/extractor/CheckstyleExampleExtractor.java"/>
+</suppressions>

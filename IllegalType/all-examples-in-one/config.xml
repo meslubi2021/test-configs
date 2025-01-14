@@ -33,7 +33,7 @@
 
         <module name="IllegalType">
             <property name="id" value="example3"/>
-            <property name="ignoredMethodNames" value="function"/>
+            <property name="ignoredMethodNames" value="function1, function2"/>
         </module>
 
         <module name="IllegalType">
@@ -44,7 +44,7 @@
 
         <module name="IllegalType">
             <property name="id" value="example5"/>
-            <property name="memberModifiers" value="LITERAL_PUBLIC,        LITERAL_PROTECTED, LITERAL_STATIC"/>
+            <property name="memberModifiers" value="LITERAL_PUBLIC, LITERAL_PROTECTED, LITERAL_STATIC"/>
         </module>
 
         <module name="IllegalType">
@@ -53,14 +53,14 @@
         </module>
 
         <module name="IllegalType">
-            <property name="id" value="example7"/>
+            <property name="id" value="IllegalTypeOptionalAsField"/>
             <property name="id" value="example7"/>
             <property name="illegalClassNames" value="java.util.Optional"/>
             <property name="tokens" value="VARIABLE_DEF"/>
         </module>
 
         <module name="SuppressionXpathSingleFilter">
-            <property name="id" value="example7"/>
+            <property name="id" value="IllegalTypeOptionalAsField"/>
             <property name="id" value="example7"/>
             <property name="query" value="//METHOD_DEF//*"/>
         </module>

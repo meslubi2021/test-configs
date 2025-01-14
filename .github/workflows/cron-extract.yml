@@ -1,0 +1,46 @@
+name: Cron Extractor
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Run once a day at midnight UTC
+  workflow_dispatch:  # Allow manual triggering
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 21
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: '21'
+
+    - name: Run setup script
+      run: ./setup.sh
+
+    - name: Build and Test with Gradle
+      run: |
+        cd extractor
+        ./gradlew clean build test run --args="../.ci-temp/checkstyle" --info --stacktrace --console=plain \
+          -Dorg.gradle.logging.level=DEBUG \
+          -Dtest.single=MainsLauncherTest
+
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        # Check if there are any changes, if so commit them
+        git diff --staged --exit-code || git commit -m "Update from extractor auto execution"
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}

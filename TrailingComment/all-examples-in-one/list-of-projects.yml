@@ -1,0 +1,129 @@
+projects:
+  - name: checkstyle-sonar
+    scm: git
+    url: https://github.com/checkstyle/sonar-checkstyle
+    reference: master
+
+  - name: Hartshorn
+    scm: git
+    url: https://github.com/Dockbox-OSS/Hartshorn
+    reference: develop/0.7.0
+
+  - name: camunda
+    scm: git
+    url: https://github.com/camunda/camunda
+    reference: main
+
+  - name: spotbugs
+    scm: git
+    url: https://github.com/spotbugs/spotbugs
+    reference: 3.1.2
+
+  - name: pmd
+    scm: git
+    url: https://github.com/pmd/pmd
+    reference: pmd_releases/6.21.0
+    excludes:
+      - '**/pmd/pmd-java/src/test/**/*'
+      - '**/pmd/cpd/files/*'
+
+  - name: spoon
+    scm: git
+    url: https://github.com/INRIA/spoon.git
+    reference: spoon-core-10.1.0
+    excludes:
+      - '**/src/test/resources/**/*'
+
+  - name: lombok-ast
+    scm: git
+    url: https://github.com/rzwitserloot/lombok.ast
+    reference: v0.2
+    excludes:
+      - '**/lombok-ast/test/**/*'
+
+  - name: spring-framework
+    scm: git
+    url: https://github.com/spring-projects/spring-framework
+    reference: v4.1.6.RELEASE
+
+  - name: hibernate-orm
+    scm: git
+    url: https://github.com/hibernate/hibernate-orm
+    reference: 4.2.19.Final
+    excludes:
+      - '**/hibernate-orm/documentation/**/*'
+
+  - name: elasticsearch
+    scm: git
+    url: https://github.com/elastic/elasticsearch
+    reference: v1.5.2
+
+  - name: java-design-patterns
+    scm: git
+    url: https://github.com/iluwatar/java-design-patterns
+    reference: dd855a376bc025aa61f6816584f79eb9854fe5d7
+
+  - name: MaterialDesignLibrary
+    scm: git
+    url: https://github.com/navasmdc/MaterialDesignLibrary
+    reference: 1.3
+
+  - name: Hbase
+    scm: git
+    url: https://github.com/apache/hbase
+    reference: 1.1.0.1
+
+  - name: Orekit
+    scm: git
+    url: https://github.com/CS-SI/Orekit
+    reference: 8.0.1
+
+  - name: apache-ant
+    scm: git
+    url: https://github.com/apache/ant
+    reference: ANT_194
+    excludes:
+      - '**/apache-ant/src/tests/**/*'
+      - '**/apache-ant/src/etc/testcases/'
+
+  - name: apache-jsecurity
+    scm: git
+    url: https://github.com/apache/jsecurity
+    reference: c2ac5b90a467aedb04b52ae50a99e83207d847b3
+
+  - name: android-launcher
+    scm: git
+    url: https://github.com/android/platform_packages_apps_launcher
+    reference: android-2.1_r2.1p2
+
+  - name: apache-struts
+    scm: git
+    url: https://github.com/apache/struts.git
+    reference: main
+    excludes:
+      - '**/apache-struts/**/resources/**/*'
+
+  - name: infinispan
+    scm: git
+    url: https://github.com/infinispan/infinispan
+    reference: 7.2.5.Final
+
+  - name: protonpack
+    scm: git
+    url: https://github.com/poetix/protonpack
+    reference: protonpack-1.7
+
+  - name: jOOL
+    scm: git
+    url: https://github.com/jOOQ/jOOL
+    reference: version-0.9.7
+
+  - name: RxJava
+    scm: git
+    url: https://github.com/ReactiveX/RxJava
+    reference: v1.0.9
+
+  - name: Vavr
+    scm: git
+    url: https://github.com/vavr-io/vavr
+    reference: v0.9.0
